@@ -190,7 +190,7 @@ while True:
             # Setup serial connection
             arduino = serial.Serial(port=cfg.ARDUINO_SERIAL_PORT, baudrate=cfg.ARDUINO_BAUD_RATE, timeout=.1)
             if cfg.WAIT_BEFORE_SEND:
-                time.sleep(1)
+                time.sleep(2.5)
 
             arduino.write(bytes(arduino_string, 'utf-8'))
             time.sleep(0.1)  # Give time for the data to be sent
